@@ -18,6 +18,7 @@ classificador = Sequential()
 classificador.add(Dense(units=16, activation='relu', kernel_initializer='random_uniform', input_dim=30))
 classificador.add(Dense(units=1, activation='sigmoid'))
 
+#eh necessario fazer a compilacao antes do treinamento
 classificador.compile(optimizer='adam', loss='binary_crossentropy', metrics=['binary_accuracy'])
 
 classificador.fit(entradas_treino, saidas_treino, epochs=1000)
